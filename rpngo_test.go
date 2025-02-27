@@ -59,6 +59,8 @@ func TestSomeExpression(t *testing.T) {
 		{expression: "(2-3)*(2+3)*(2^2+3^2)", rpn_expression: "2 3 - 2 3 + * 2 2 ^ 3 2 ^ + *", result: -65.000000, is_expected_result: true},
 		{expression: "2^5-3^5", rpn_expression: "2 5 ^ 3 5 ^ -", result: -211.000000, is_expected_result: true},
 		{expression: "(2-3)*(2^4+2^3*3+2^2*3^2+2*3^3+3^4)", rpn_expression: "2 3 - 2 4 ^ 2 3 ^ 3 * + 2 2 ^ 3 2 ^ * + 2 3 3 ^ * + 3 4 ^ + *", result: -211.000000, is_expected_result: true},
+
+		{description: "Factorial test", expression: "2!+5-3!+5", rpn_expression: "2 ! 5 + 3 ! - 5 +", result: 6, is_expected_result: true},
 	}
 	for i := range list_expression {
 		item := list_expression[i]
